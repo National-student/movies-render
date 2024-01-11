@@ -100,6 +100,41 @@
           </nav>
         </div>
       </div>
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <template id="template">
@@ -117,10 +152,19 @@
             <a
               href="https://www.youtube.com/watch?v=4hZi5QaMBFc"
               target="_blanc"
-              class="btn btn-outline-primary"
+              class="btn btn-outline-primary watch_trailer"
               >Watch trailer</a
-            ><button class="btn btn-outline-info">More info</button
-            ><button class="btn btn-outline-success">Bookmark</button>
+            ><button
+              type="button"
+              class="btn btn-outline-info"
+              id="more_info"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              More info
+            </button>
+
+            <button class="btn btn-outline-success" >Bookmark</button>
           </div>
         </div>
       </li>
